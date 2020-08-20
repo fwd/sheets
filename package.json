@@ -1,0 +1,13 @@
+{
+  "name": "@fwd/sheets",
+  "version": "0.0.1",
+  "description": "A NodeJS library for programmatically using Google Spreadsheets.",
+  "main": "src/index.js",
+  "repository": "git@github.com:fwd/sheets.git",
+  "author": "Forward Miami <hello@forward.miami>",
+  "license": "MIT",
+  "dependencies": {
+    "google-spreadsheet": "^3.0.13"
+  },
+  "scripts": {}
+}
