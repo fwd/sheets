@@ -7,6 +7,7 @@
   "author": "Forward Miami <hello@forward.miami>",
   "license": "MIT",
   "dependencies": {
+    "@fwd/server": "^1.0.20",
     "google-spreadsheet": "^3.0.13"
   },
   "scripts": {}
