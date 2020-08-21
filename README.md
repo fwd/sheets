@@ -43,11 +43,11 @@ config["spreadsheetId"] = ""
 	const spreadsheet = await spreadsheets(config)
 
 	// Available methods
-	spreadsheet.addRow(worksheetName, value) {}
-	spreadsheet.addRows(worksheetName, values) {}
-	spreadsheet.getRows(worksheetName) {}
-	spreadsheet.getWorksheet(worksheetName) {}
-	spreadsheet.setWorksheet(worksheetName, headerValues) {}
+	spreadsheet.addRow(worksheetName, value) 
+	spreadsheet.addRows(worksheetName, values) 
+	spreadsheet.getRows(worksheetName) 
+	spreadsheet.getWorksheet(worksheetName) 
+	spreadsheet.setWorksheet(worksheetName, headerValues) 
 
 })()
 
