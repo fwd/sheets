@@ -33,8 +33,9 @@ var config = {
 	"token_uri": "",
 	"auth_provider_x509_cert_url": "",
 	"client_x509_cert_url": ""
-	"spreadsheetId": ""
 }
+
+config["spreadsheetId"] = ""
 
 ;(async() => {
 
