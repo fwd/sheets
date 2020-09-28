@@ -1,29 +1,33 @@
-const server = require('@fwd/server')
 const { GoogleSpreadsheet } = require('google-spreadsheet')
 
-module.exports = async (config) => {
+module.exports = (credentials) => {
 
-  const doc = new GoogleSpreadsheet(config.spreadsheetId);
-
-  await doc.useServiceAccountAuth(config);
-
-  await doc.loadInfo();
+  if (!credentials) {
+    console.log("Error: No credentials provided.")
+    return
+  }
 
   return {
 
-    // async getHeaderValues() {},
-    // async getHeaderValues(array) {},
+    doc: null,
+
+    async init(databaseId) {
+      this.doc = new GoogleSpreadsheet(databaseId);
+      await this.doc.useServiceAccountAuth(credentials);
+      await this.doc.loadInfo();
+      return this
+    },  
 
     async getProperties() {
-      return doc
+      return this.doc
     },
 
     async setProperties(properties) {
-      await doc.updateProperties(properties);
+      await this.doc.updateProperties(properties);
     },
 
     async getWorksheets() {
-      var list = await doc.sheetsById
+      var list = await this.doc.sheetsById
       var worksheets = []
       for (index in list) {
         worksheets.push(list[index]._rawProperties)
@@ -111,13 +115,13 @@ module.exports = async (config) => {
         return false
       }
 
-      return doc.sheetsById[sheet.sheetId]
+      return this.doc.sheetsById[sheet.sheetId]
 
     },
 
     async setWorksheet(worksheetName, headerValues) {
 
-      const newSheet = await doc.addSheet({
+      const newSheet = await this.doc.addSheet({
           title: worksheetName,
           headerValues: headerValues
       });
