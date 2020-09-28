@@ -1,6 +1,6 @@
 {
   "name": "@fwd/sheets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A NodeJS library for programmatically using Google Spreadsheets.",
   "main": "src/index.js",
   "repository": "git@github.com:fwd/sheets.git",
