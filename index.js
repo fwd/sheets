@@ -61,7 +61,7 @@ module.exports = (credentials) => {
 
     async addRow(worksheetName, value) {
 
-      var sheet = this.getWorksheet(worksheetName)
+      var sheet = await this.getWorksheet(worksheetName)
 
       if (!sheet) {
         return false
@@ -73,7 +73,7 @@ module.exports = (credentials) => {
     
     async addRows(worksheetName, values) {
 
-      var sheet = this.getWorksheet(worksheetName)
+      var sheet = await this.getWorksheet(worksheetName)
 
       if (!sheet) {
         return false
