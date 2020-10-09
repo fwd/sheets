@@ -38,7 +38,7 @@ const spreadsheet = spreadsheets({
 
 ;(async() => {
 
-	var sheet = await init(spreadsheetId)
+	var sheet = await spreadsheets.init(spreadsheetId)
 
 	// Available methods
 	spreadsheet.addRow(worksheetName, value) 
