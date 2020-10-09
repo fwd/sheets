@@ -41,11 +41,11 @@ const spreadsheet = spreadsheets({
 	var sheet = await spreadsheets.init(spreadsheetId)
 
 	// Available methods
-	spreadsheet.addRow(worksheetName, value) 
-	spreadsheet.addRows(worksheetName, values) 
-	spreadsheet.getRows(worksheetName) 
-	spreadsheet.getWorksheet(worksheetName) 
-	spreadsheet.setWorksheet(worksheetName, headerValues) 
+	sheet.addRow(worksheetName, value) 
+	sheet.addRows(worksheetName, values) 
+	sheet.getRows(worksheetName) 
+	sheet.getWorksheet(worksheetName) 
+	sheet.setWorksheet(worksheetName, headerValues) 
 
 })()
 
