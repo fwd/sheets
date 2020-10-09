@@ -22,7 +22,8 @@ yarn add @fwd/sheets
 
 const spreadsheets = require('@fwd/sheets')
 
-var config = {
+// init
+const spreadsheet = spreadsheets({
 	"type": "service_account",
 	"project_id": "",
 	"private_key_id": "",
@@ -33,14 +34,11 @@ var config = {
 	"token_uri": "",
 	"auth_provider_x509_cert_url": "",
 	"client_x509_cert_url": ""
-}
-
-config["spreadsheetId"] = ""
+})
 
 ;(async() => {
 
-	// init
-	const spreadsheet = await spreadsheets(config)
+	var sheet = await init(spreadsheetId)
 
 	// Available methods
 	spreadsheet.addRow(worksheetName, value) 
