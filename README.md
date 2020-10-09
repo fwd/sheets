@@ -16,13 +16,33 @@ npm install @fwd/sheets
 yarn add @fwd/sheets
 ```
 
+## Google Cloud API Key
+
+### Before you can use this, you'll need a few things. 
+
+#### __GOOGLE_API_KEY__
+
+See this: https://cloud.google.com/docs/authentication/getting-started and https://console.cloud.google.com/apis/credentials/serviceaccountkey
+
+#### spreadsheetId
+
+That's easy, every Google Spreadsheet has it the URL.
+
+See this: https://stackoverflow.com/questions/36061433/how-to-do-i-locate-a-google-spreadsheet-id
+
+#### You need to add the 'client_email' of your __GOOGLE_API_KEY__ as a edtior in the Google Spreadsheet
+
+Just click Share in the top right of the Google Spreadsheet, and add the email as if it was a person's email.
+
+See this: https://support.google.com/docs/answer/9331169?hl=en#6.1
+
 ## Usage
 
 ```javascript
 
 const spreadsheets = require('@fwd/sheets')
 
-// init
+// init __GOOGLE_API_KEY__
 const spreadsheet = spreadsheets({
 	"type": "service_account",
 	"project_id": "",
