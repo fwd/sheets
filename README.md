@@ -24,7 +24,7 @@ Before you can use this, you'll need a few things.
 
 See this: [https://cloud.google.com/docs/authentication/getting-started](https://cloud.google.com/docs/authentication/getting-started)
 
-#### 2. Location the spreadsheetId of the Google Spreadsheet you want to use.
+#### 2. Get the spreadsheetId of the Google Spreadsheet you want to use.
 
 That's easy, every Google Spreadsheet has it in the URL.
 
@@ -59,7 +59,7 @@ const spreadsheet = spreadsheets({
 
 ;(async() => {
 
-	var sheet = await spreadsheets.init(spreadsheetId)
+	var sheet = await spreadsheets.init("spreadsheetId")
 
 	// Available methods
 	sheet.addRow(worksheetName, value) 
