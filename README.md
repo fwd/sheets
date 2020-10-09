@@ -22,19 +22,20 @@ Before you can use this, you'll need a few things.
 
 #### 1. Get Google Cloud Credentials as JSON
 
-See this: https://cloud.google.com/docs/authentication/getting-started
+See this: [https://cloud.google.com/docs/authentication/getting-started](https://cloud.google.com/docs/authentication/getting-started)
 
 #### 2. Location the spreadsheetId of the Google Spreadsheet you want to use.
 
-That's easy, every Google Spreadsheet has it the URL.
+That's easy, every Google Spreadsheet has it in the URL.
 
-See this: https://stackoverflow.com/questions/36061433/how-to-do-i-locate-a-google-spreadsheet-id
+See this: [https://stackoverflow.com/questions/36061433/how-to-do-i-locate-a-google-spreadsheet-id](https://stackoverflow.com/questions/36061433/how-to-do-i-locate-a-google-spreadsheet-id)
 
 #### 3. You need to add the 'client_email' of your Google Cloud API Key as an editor in the Google Spreadsheet.
 
 Just click Share in the top right of the Google Spreadsheet, and add the email as if it was a person's email.
 
-See this: https://support.google.com/docs/answer/9331169?hl=en#6.1
+See this: [https://support.google.com/docs/answer/9331169?hl=en#6.1](https://support.google.com/docs/answer/9331169?hl=en#6.1)
+
 
 ## Usage
 
