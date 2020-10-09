@@ -6,7 +6,7 @@
 
 ## Description
 
-This package is under active development. 
+This package is under active development. Probably not ready for production.
 
 ## Install
 
