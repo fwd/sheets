@@ -20,17 +20,17 @@ yarn add @fwd/sheets
 
 ### Before you can use this, you'll need a few things. 
 
-#### __GOOGLE_API_KEY__
+#### 1. Get Google Cloud Credentials as JSON
 
-See this: https://cloud.google.com/docs/authentication/getting-started and https://console.cloud.google.com/apis/credentials/serviceaccountkey
+See this: https://cloud.google.com/docs/authentication/getting-started
 
-#### spreadsheetId
+#### 2. Location the spreadsheetId of the Google Spreadsheet you want to use.
 
 That's easy, every Google Spreadsheet has it the URL.
 
 See this: https://stackoverflow.com/questions/36061433/how-to-do-i-locate-a-google-spreadsheet-id
 
-#### You need to add the 'client_email' of your __GOOGLE_API_KEY__ as a edtior in the Google Spreadsheet
+#### 3. You need to add the 'client_email' of your Google Cloud API Key as an editor in the Google Spreadsheet.
 
 Just click Share in the top right of the Google Spreadsheet, and add the email as if it was a person's email.
 
