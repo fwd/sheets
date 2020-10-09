@@ -62,6 +62,8 @@ const spreadsheet = spreadsheets({
 	var sheet = await spreadsheets.init("spreadsheetId")
 
 	// Available methods
+	 
+	sheet.getWorksheets() 
 	sheet.addRow(worksheetName, value) 
 	sheet.addRows(worksheetName, values) 
 	sheet.getRows(worksheetName) 
