@@ -16,9 +16,9 @@ npm install @fwd/sheets
 yarn add @fwd/sheets
 ```
 
-## Google Cloud API Key
+## Before Using
 
-### Before you can use this, you'll need a few things. 
+Before you can use this, you'll need a few things. 
 
 #### 1. Get Google Cloud Credentials as JSON
 
