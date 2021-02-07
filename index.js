@@ -67,7 +67,7 @@ module.exports = (credentials) => {
         return false
       }
 
-      sheet.addRow(value)
+      await sheet.addRow(value)
 
     },
     
@@ -79,7 +79,7 @@ module.exports = (credentials) => {
         return false
       }
 
-      sheet.addRows(values)
+      await sheet.addRows(values)
 
     },
 
