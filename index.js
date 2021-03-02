@@ -36,7 +36,9 @@ module.exports = (credentials) => {
     },
 
     async setRow(worksheetName, rowId, object) {
-      
+        
+      rowId = parseInt(rowId)
+
       var sheet = await this.getWorksheet(worksheetName)
 
       if (!sheet) {
@@ -44,17 +46,16 @@ module.exports = (credentials) => {
       }
 
       var rows = await sheet.getRows()
-      
-      var row = rows.find(a => a._rowNumber === rowId)
 
-      if (row) {
-          
-          for (var i in object) {
-              row[i] = object[i];
-          }
+      var keys = Object.keys(object)
 
-          await row.save();
-
+      for (var i in keys) {
+        if (rows[rowId] && rows[rowId][keys[i]]) {
+          rows[rowId][keys[i]] = object[keys[i]]
+          rows[rowId].save()
+        } else {
+          console.log(`Row ${rowId} does not exists.`)
+        }
       }
 
     },
@@ -91,13 +92,15 @@ module.exports = (credentials) => {
       
       var data = []
 
-      rows.map((row) => {
+      rows.map((row, index) => {
           var item = {}
+          item.id = index
           Object.keys(row).map(a => {
-              if (a !== '_sheet' && a !== '_rawData') {
+              if (a !== '_sheet' && a !== '_rawData' && a !== 'id') {
                   item[a] = row[a]
               }
           })
+          delete item._rowNumber
           data.push(item)
       })
 
