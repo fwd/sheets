@@ -1,0 +1,13 @@
+{
+  "name": "@fwd/sheets",
+  "version": "1.0.0",
+  "description": "NodeJS Google Spreadsheets",
+  "main": "src/index.js",
+  "repository": "git@github.com:fwd/sheets.git",
+  "author": "twitter.com/nano2dev",
+  "license": "MIT",
+  "dependencies": {
+    "google-spreadsheet": "^3.0.13"
+  },
+  "scripts": {}
+}
