@@ -11,9 +11,9 @@ This package is under active development. Probably not ready for production.
 ## Install
 
 ```sh
-npm install @fwd/sheets
+npm install fwd/sheets
 # or
-yarn add @fwd/sheets
+yarn add fwd/sheets
 ```
 
 ## Before Using
@@ -73,22 +73,3 @@ const spreadsheet = spreadsheets({
 })()
 
 ```
-
-## Author
-
-👤  **Forward Miami**
-
-* Website: [https://forward.miami](https://forward.miami)
-* Github: [@fwd](https://github.com/fwd)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fwd/render/issues).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-## 📝 License
-
-Copyright © 2020 [Forward Miami](https://forward.miami).
